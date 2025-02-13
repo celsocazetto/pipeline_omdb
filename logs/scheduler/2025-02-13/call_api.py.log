@@ -936,3 +936,45 @@
 [2025-02-13T01:08:52.426+0000] {logging_mixin.py:190} INFO - [2025-02-13T01:08:52.426+0000] {dag.py:3239} INFO - Sync 1 DAGs
 [2025-02-13T01:08:52.445+0000] {logging_mixin.py:190} INFO - [2025-02-13T01:08:52.445+0000] {dag.py:4180} INFO - Setting next_dagrun for call_omdb_api to 2025-02-13 01:08:00+00:00, run_after=2025-02-13 01:09:00+00:00
 [2025-02-13T01:08:52.459+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/call_api.py took 0.076 seconds
+[2025-02-13T01:09:22.638+0000] {processor.py:186} INFO - Started process (PID=1350) to work on /opt/airflow/dags/call_api.py
+[2025-02-13T01:09:22.638+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/call_api.py for tasks to queue
+[2025-02-13T01:09:22.640+0000] {logging_mixin.py:190} INFO - [2025-02-13T01:09:22.640+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/call_api.py
+[2025-02-13T01:09:22.662+0000] {processor.py:925} INFO - DAG(s) 'call_omdb_api' retrieved from /opt/airflow/dags/call_api.py
+[2025-02-13T01:09:22.687+0000] {logging_mixin.py:190} INFO - [2025-02-13T01:09:22.687+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-13T01:09:22.714+0000] {logging_mixin.py:190} INFO - [2025-02-13T01:09:22.714+0000] {dag.py:4180} INFO - Setting next_dagrun for call_omdb_api to 2025-02-13 01:09:00+00:00, run_after=2025-02-13 01:10:00+00:00
+[2025-02-13T01:09:22.733+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/call_api.py took 0.100 seconds
+[2025-02-13T01:09:52.810+0000] {processor.py:186} INFO - Started process (PID=1357) to work on /opt/airflow/dags/call_api.py
+[2025-02-13T01:09:52.810+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/call_api.py for tasks to queue
+[2025-02-13T01:09:52.812+0000] {logging_mixin.py:190} INFO - [2025-02-13T01:09:52.812+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/call_api.py
+[2025-02-13T01:09:52.831+0000] {processor.py:925} INFO - DAG(s) 'call_omdb_api' retrieved from /opt/airflow/dags/call_api.py
+[2025-02-13T01:09:52.854+0000] {logging_mixin.py:190} INFO - [2025-02-13T01:09:52.854+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-13T01:09:52.877+0000] {logging_mixin.py:190} INFO - [2025-02-13T01:09:52.876+0000] {dag.py:4180} INFO - Setting next_dagrun for call_omdb_api to 2025-02-13 01:09:00+00:00, run_after=2025-02-13 01:10:00+00:00
+[2025-02-13T01:09:52.890+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/call_api.py took 0.085 seconds
+[2025-02-13T01:10:23.074+0000] {processor.py:186} INFO - Started process (PID=1364) to work on /opt/airflow/dags/call_api.py
+[2025-02-13T01:10:23.075+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/call_api.py for tasks to queue
+[2025-02-13T01:10:23.077+0000] {logging_mixin.py:190} INFO - [2025-02-13T01:10:23.077+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/call_api.py
+[2025-02-13T01:10:23.100+0000] {processor.py:925} INFO - DAG(s) 'call_omdb_api' retrieved from /opt/airflow/dags/call_api.py
+[2025-02-13T01:10:23.124+0000] {logging_mixin.py:190} INFO - [2025-02-13T01:10:23.124+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-13T01:10:23.149+0000] {logging_mixin.py:190} INFO - [2025-02-13T01:10:23.149+0000] {dag.py:4180} INFO - Setting next_dagrun for call_omdb_api to 2025-02-13 01:10:00+00:00, run_after=2025-02-13 01:11:00+00:00
+[2025-02-13T01:10:23.166+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/call_api.py took 0.098 seconds
+[2025-02-13T01:10:53.266+0000] {processor.py:186} INFO - Started process (PID=1371) to work on /opt/airflow/dags/call_api.py
+[2025-02-13T01:10:53.266+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/call_api.py for tasks to queue
+[2025-02-13T01:10:53.269+0000] {logging_mixin.py:190} INFO - [2025-02-13T01:10:53.268+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/call_api.py
+[2025-02-13T01:10:53.286+0000] {processor.py:925} INFO - DAG(s) 'call_omdb_api' retrieved from /opt/airflow/dags/call_api.py
+[2025-02-13T01:10:53.308+0000] {logging_mixin.py:190} INFO - [2025-02-13T01:10:53.307+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-13T01:10:53.330+0000] {logging_mixin.py:190} INFO - [2025-02-13T01:10:53.329+0000] {dag.py:4180} INFO - Setting next_dagrun for call_omdb_api to 2025-02-13 01:10:00+00:00, run_after=2025-02-13 01:11:00+00:00
+[2025-02-13T01:10:53.554+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/call_api.py took 0.293 seconds
+[2025-02-13T01:11:23.730+0000] {processor.py:186} INFO - Started process (PID=1378) to work on /opt/airflow/dags/call_api.py
+[2025-02-13T01:11:23.731+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/call_api.py for tasks to queue
+[2025-02-13T01:11:23.733+0000] {logging_mixin.py:190} INFO - [2025-02-13T01:11:23.733+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/call_api.py
+[2025-02-13T01:11:23.751+0000] {processor.py:925} INFO - DAG(s) 'call_omdb_api' retrieved from /opt/airflow/dags/call_api.py
+[2025-02-13T01:11:23.769+0000] {logging_mixin.py:190} INFO - [2025-02-13T01:11:23.769+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-13T01:11:23.787+0000] {logging_mixin.py:190} INFO - [2025-02-13T01:11:23.787+0000] {dag.py:4180} INFO - Setting next_dagrun for call_omdb_api to 2025-02-13 01:11:00+00:00, run_after=2025-02-13 01:12:00+00:00
+[2025-02-13T01:11:23.800+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/call_api.py took 0.074 seconds
+[2025-02-13T01:11:53.899+0000] {processor.py:186} INFO - Started process (PID=1385) to work on /opt/airflow/dags/call_api.py
+[2025-02-13T01:11:53.899+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/call_api.py for tasks to queue
+[2025-02-13T01:11:53.901+0000] {logging_mixin.py:190} INFO - [2025-02-13T01:11:53.901+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/call_api.py
+[2025-02-13T01:11:53.917+0000] {processor.py:925} INFO - DAG(s) 'call_omdb_api' retrieved from /opt/airflow/dags/call_api.py
+[2025-02-13T01:11:53.935+0000] {logging_mixin.py:190} INFO - [2025-02-13T01:11:53.935+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-13T01:11:53.954+0000] {logging_mixin.py:190} INFO - [2025-02-13T01:11:53.954+0000] {dag.py:4180} INFO - Setting next_dagrun for call_omdb_api to 2025-02-13 01:11:00+00:00, run_after=2025-02-13 01:12:00+00:00
+[2025-02-13T01:11:53.968+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/call_api.py took 0.073 seconds

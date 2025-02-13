@@ -1,2 +1,2 @@
-logs/*
-dags/__pycache__/*
+/logs/*
+/dags/__pycache__/*
