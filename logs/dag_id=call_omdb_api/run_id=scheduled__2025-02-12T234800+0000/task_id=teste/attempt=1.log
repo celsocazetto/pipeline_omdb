@@ -1,0 +1,39 @@
+[2025-02-12T23:49:00.811+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-12T23:49:00.821+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: call_omdb_api.teste scheduled__2025-02-12T23:48:00+00:00 [queued]>
+[2025-02-12T23:49:00.826+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: call_omdb_api.teste scheduled__2025-02-12T23:48:00+00:00 [queued]>
+[2025-02-12T23:49:00.827+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 2
+[2025-02-12T23:49:00.836+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): teste> on 2025-02-12 23:48:00+00:00
+[2025-02-12T23:49:00.840+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=532) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-12T23:49:00.841+0000] {standard_task_runner.py:72} INFO - Started process 533 to run task
+[2025-02-12T23:49:00.841+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'call_omdb_api', 'teste', 'scheduled__2025-02-12T23:48:00+00:00', '--job-id', '27', '--raw', '--subdir', 'DAGS_FOLDER/call_api.py', '--cfg-path', '/tmp/tmpdthuvgzo']
+[2025-02-12T23:49:00.842+0000] {standard_task_runner.py:105} INFO - Job 27: Subtask teste
+[2025-02-12T23:49:00.873+0000] {task_command.py:467} INFO - Running <TaskInstance: call_omdb_api.teste scheduled__2025-02-12T23:48:00+00:00 [running]> on host 76fc25d1410f
+[2025-02-12T23:49:00.929+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Celso Cazetto' AIRFLOW_CTX_DAG_ID='call_omdb_api' AIRFLOW_CTX_TASK_ID='teste' AIRFLOW_CTX_EXECUTION_DATE='2025-02-12T23:48:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-02-12T23:48:00+00:00'
+[2025-02-12T23:49:00.930+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-02-12T23:49:00.939+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-02-12T23:49:00.940+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'source /home/***/venv/omdb_env/bin/activate && python /opt/***/pipeline/main.py']
+[2025-02-12T23:49:00.948+0000] {subprocess.py:99} INFO - Output:
+[2025-02-12T23:49:01.785+0000] {subprocess.py:106} INFO - 2025-02-12 23:49:01,785 - INFO - ESTOU RODANDO ESSA PORRA
+[2025-02-12T23:49:01.786+0000] {subprocess.py:106} INFO - 2025-02-12 23:49:01,786 - INFO - Carregando o arquivo de configuração
+[2025-02-12T23:49:01.787+0000] {subprocess.py:106} INFO - 2025-02-12 23:49:01,787 - INFO - Buscando os dados de filme do ID:tt0371746
+[2025-02-12T23:49:01.903+0000] {subprocess.py:106} INFO - 2025-02-12 23:49:01,903 - INFO - Dados da API carregados com sucesso
+[2025-02-12T23:49:01.904+0000] {subprocess.py:106} INFO - 2025-02-12 23:49:01,903 - INFO - Iniciando transformação dos dados.
+[2025-02-12T23:49:01.910+0000] {subprocess.py:106} INFO - 2025-02-12 23:49:01,910 - INFO - Estabelecendo conexão com o banco de dados:
+[2025-02-12T23:49:01.941+0000] {subprocess.py:106} INFO - 2025-02-12 23:49:01,941 - INFO - Conexão estabelecida com sucesso.
+[2025-02-12T23:49:01.960+0000] {subprocess.py:106} INFO - 2025-02-12 23:49:01,960 - INFO - Iniciando o inserção na tabela: omdb.filmes
+[2025-02-12T23:49:01.963+0000] {subprocess.py:106} INFO - 2025-02-12 23:49:01,963 - INFO - 0 Inseridos na tabela omdb.filmes
+[2025-02-12T23:49:01.967+0000] {subprocess.py:106} INFO - 2025-02-12 23:49:01,967 - INFO - Iniciando o inserção na tabela: omdb.genero
+[2025-02-12T23:49:01.968+0000] {subprocess.py:106} INFO - 2025-02-12 23:49:01,968 - INFO - 0 Inseridos na tabela omdb.genero
+[2025-02-12T23:49:01.976+0000] {subprocess.py:106} INFO - 2025-02-12 23:49:01,976 - INFO - Iniciando o inserção na tabela: omdb.filme_genero
+[2025-02-12T23:49:01.978+0000] {subprocess.py:106} INFO - 2025-02-12 23:49:01,977 - INFO - 0 Inseridos na tabela omdb.filme_genero
+[2025-02-12T23:49:01.979+0000] {subprocess.py:106} INFO - 2025-02-12 23:49:01,979 - INFO - Conexão finalizada com o banco
+[2025-02-12T23:49:01.980+0000] {subprocess.py:106} INFO - 2025-02-12 23:49:01,979 - INFO - Fim do processo de ingestão.
+[2025-02-12T23:49:01.980+0000] {subprocess.py:106} INFO - 2.0.38
+[2025-02-12T23:49:02.059+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-02-12T23:49:02.079+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-02-12T23:49:02.080+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=call_omdb_api, task_id=teste, run_id=scheduled__2025-02-12T23:48:00+00:00, execution_date=20250212T234800, start_date=20250212T234900, end_date=20250212T234902
+[2025-02-12T23:49:02.138+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-12T23:49:02.151+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-12T23:49:02.153+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,49 @@
+[2025-02-12T20:07:05.380+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-02-12T20:07:05.397+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: call_omdb_api.teste scheduled__2025-02-12T20:06:00+00:00 [queued]>
+[2025-02-12T20:07:05.403+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: call_omdb_api.teste scheduled__2025-02-12T20:06:00+00:00 [queued]>
+[2025-02-12T20:07:05.404+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-02-12T20:07:05.413+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): teste> on 2025-02-12 20:06:00+00:00
+[2025-02-12T20:07:05.417+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=810) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-12T20:07:05.418+0000] {standard_task_runner.py:63} INFO - Started process 811 to run task
+[2025-02-12T20:07:05.418+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'call_omdb_api', 'teste', 'scheduled__2025-02-12T20:06:00+00:00', '--job-id', '74', '--raw', '--subdir', 'DAGS_FOLDER/call_api.py', '--cfg-path', '/tmp/tmpy69o88cq']
+[2025-02-12T20:07:05.419+0000] {standard_task_runner.py:91} INFO - Job 74: Subtask teste
+[2025-02-12T20:07:05.455+0000] {task_command.py:426} INFO - Running <TaskInstance: call_omdb_api.teste scheduled__2025-02-12T20:06:00+00:00 [running]> on host f82bf6a6274c
+[2025-02-12T20:07:05.531+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Celso Cazetto' AIRFLOW_CTX_DAG_ID='call_omdb_api' AIRFLOW_CTX_TASK_ID='teste' AIRFLOW_CTX_EXECUTION_DATE='2025-02-12T20:06:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-02-12T20:06:00+00:00'
+[2025-02-12T20:07:05.532+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-02-12T20:07:05.542+0000] {logging_mixin.py:188} INFO - CURRENT PATH BLABLA /opt/***
+[2025-02-12T20:07:05.544+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-02-12T20:07:05.545+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/call_api.py", line 24, in call_api
+    subprocess.run(['python', path_file])
+  File "/usr/local/lib/python3.12/subprocess.py", line 548, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/local/lib/python3.12/subprocess.py", line 1885, in _execute_child
+    self.pid = _fork_exec(
+               ^^^^^^^^^^^
+TypeError: expected str, bytes or os.PathLike object, not bool
+[2025-02-12T20:07:05.555+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=call_omdb_api, task_id=teste, run_id=scheduled__2025-02-12T20:06:00+00:00, execution_date=20250212T200600, start_date=20250212T200705, end_date=20250212T200705
+[2025-02-12T20:07:05.564+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 74 for task teste (expected str, bytes or os.PathLike object, not bool; 811)
+[2025-02-12T20:07:05.592+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-02-12T20:07:05.606+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-12T20:07:05.608+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,11 @@
+{
+    "apikey":"b063e85b",
+    "filmeid":"tt0499549",
+    "database":{
+        "usuario":"dbadmin",
+        "senha":"dbadmin123",
+        "host":"host.docker.internal",
+        "port":5432,
+        "nome_db":"omdb"
+    }
+}

@@ -1,0 +1,163 @@
+[2025-02-13T00:15:42.726+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-13T00:15:42.739+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: call_omdb_api.teste scheduled__2025-02-13T00:14:00+00:00 [queued]>
+[2025-02-13T00:15:42.745+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: call_omdb_api.teste scheduled__2025-02-13T00:14:00+00:00 [queued]>
+[2025-02-13T00:15:42.746+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 2
+[2025-02-13T00:15:42.756+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): teste> on 2025-02-13 00:14:00+00:00
+[2025-02-13T00:15:42.762+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1202) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-13T00:15:42.764+0000] {standard_task_runner.py:72} INFO - Started process 1203 to run task
+[2025-02-13T00:15:42.764+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'call_omdb_api', 'teste', 'scheduled__2025-02-13T00:14:00+00:00', '--job-id', '51', '--raw', '--subdir', 'DAGS_FOLDER/call_api.py', '--cfg-path', '/tmp/tmpz7mgqh83']
+[2025-02-13T00:15:42.765+0000] {standard_task_runner.py:105} INFO - Job 51: Subtask teste
+[2025-02-13T00:15:42.799+0000] {task_command.py:467} INFO - Running <TaskInstance: call_omdb_api.teste scheduled__2025-02-13T00:14:00+00:00 [running]> on host 76fc25d1410f
+[2025-02-13T00:15:42.864+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Celso Cazetto' AIRFLOW_CTX_DAG_ID='call_omdb_api' AIRFLOW_CTX_TASK_ID='teste' AIRFLOW_CTX_EXECUTION_DATE='2025-02-13T00:14:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-02-13T00:14:00+00:00'
+[2025-02-13T00:15:42.865+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-02-13T00:15:42.875+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-02-13T00:15:42.876+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'source /home/***/venv/omdb_env/bin/activate && python /opt/***/pipeline/main.py']
+[2025-02-13T00:15:42.884+0000] {subprocess.py:99} INFO - Output:
+[2025-02-13T00:15:43.768+0000] {subprocess.py:106} INFO - 2025-02-13 00:15:43,768 - INFO - ESTOU RODANDO ESSA PORRA
+[2025-02-13T00:15:43.769+0000] {subprocess.py:106} INFO - 2025-02-13 00:15:43,769 - INFO - Carregando o arquivo de configuração
+[2025-02-13T00:15:43.770+0000] {subprocess.py:106} INFO - 2025-02-13 00:15:43,770 - INFO - Buscando os dados de filme do ID:tt0371746
+[2025-02-13T00:15:43.777+0000] {subprocess.py:106} INFO - 2.0.38
+[2025-02-13T00:15:43.778+0000] {subprocess.py:106} INFO - Traceback (most recent call last):
+[2025-02-13T00:15:43.778+0000] {subprocess.py:106} INFO -   File "/home/***/venv/omdb_env/lib/python3.12/site-packages/urllib3/connection.py", line 198, in _new_conn
+[2025-02-13T00:15:43.778+0000] {subprocess.py:106} INFO -     sock = connection.create_connection(
+[2025-02-13T00:15:43.779+0000] {subprocess.py:106} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-02-13T00:15:43.779+0000] {subprocess.py:106} INFO -   File "/home/***/venv/omdb_env/lib/python3.12/site-packages/urllib3/util/connection.py", line 60, in create_connection
+[2025-02-13T00:15:43.779+0000] {subprocess.py:106} INFO -     for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+[2025-02-13T00:15:43.780+0000] {subprocess.py:106} INFO -                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-02-13T00:15:43.780+0000] {subprocess.py:106} INFO -   File "/usr/local/lib/python3.12/socket.py", line 978, in getaddrinfo
+[2025-02-13T00:15:43.781+0000] {subprocess.py:106} INFO -     for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+[2025-02-13T00:15:43.781+0000] {subprocess.py:106} INFO -                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-02-13T00:15:43.781+0000] {subprocess.py:106} INFO - socket.gaierror: [Errno -2] Name or service not known
+[2025-02-13T00:15:43.782+0000] {subprocess.py:106} INFO - 
+[2025-02-13T00:15:43.782+0000] {subprocess.py:106} INFO - The above exception was the direct cause of the following exception:
+[2025-02-13T00:15:43.782+0000] {subprocess.py:106} INFO - 
+[2025-02-13T00:15:43.783+0000] {subprocess.py:106} INFO - Traceback (most recent call last):
+[2025-02-13T00:15:43.783+0000] {subprocess.py:106} INFO -   File "/home/***/venv/omdb_env/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+[2025-02-13T00:15:43.783+0000] {subprocess.py:106} INFO -     response = self._make_request(
+[2025-02-13T00:15:43.784+0000] {subprocess.py:106} INFO -                ^^^^^^^^^^^^^^^^^^^
+[2025-02-13T00:15:43.784+0000] {subprocess.py:106} INFO -   File "/home/***/venv/omdb_env/lib/python3.12/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+[2025-02-13T00:15:43.785+0000] {subprocess.py:106} INFO -     conn.request(
+[2025-02-13T00:15:43.785+0000] {subprocess.py:106} INFO -   File "/home/***/venv/omdb_env/lib/python3.12/site-packages/urllib3/connection.py", line 445, in request
+[2025-02-13T00:15:43.785+0000] {subprocess.py:106} INFO -     self.endheaders()
+[2025-02-13T00:15:43.786+0000] {subprocess.py:106} INFO -   File "/usr/local/lib/python3.12/http/client.py", line 1333, in endheaders
+[2025-02-13T00:15:43.786+0000] {subprocess.py:106} INFO -     self._send_output(message_body, encode_chunked=encode_chunked)
+[2025-02-13T00:15:43.786+0000] {subprocess.py:106} INFO -   File "/usr/local/lib/python3.12/http/client.py", line 1093, in _send_output
+[2025-02-13T00:15:43.786+0000] {subprocess.py:106} INFO -     self.send(msg)
+[2025-02-13T00:15:43.787+0000] {subprocess.py:106} INFO -   File "/usr/local/lib/python3.12/http/client.py", line 1037, in send
+[2025-02-13T00:15:43.787+0000] {subprocess.py:106} INFO -     self.connect()
+[2025-02-13T00:15:43.787+0000] {subprocess.py:106} INFO -   File "/home/***/venv/omdb_env/lib/python3.12/site-packages/urllib3/connection.py", line 276, in connect
+[2025-02-13T00:15:43.788+0000] {subprocess.py:106} INFO -     self.sock = self._new_conn()
+[2025-02-13T00:15:43.788+0000] {subprocess.py:106} INFO -                 ^^^^^^^^^^^^^^^^
+[2025-02-13T00:15:43.789+0000] {subprocess.py:106} INFO -   File "/home/***/venv/omdb_env/lib/python3.12/site-packages/urllib3/connection.py", line 205, in _new_conn
+[2025-02-13T00:15:43.789+0000] {subprocess.py:106} INFO -     raise NameResolutionError(self.host, self, e) from e
+[2025-02-13T00:15:43.789+0000] {subprocess.py:106} INFO - urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPConnection object at 0x7f0e3781cd70>: Failed to resolve 'www.omdbapi.com' ([Errno -2] Name or service not known)
+[2025-02-13T00:15:43.789+0000] {subprocess.py:106} INFO - 
+[2025-02-13T00:15:43.790+0000] {subprocess.py:106} INFO - The above exception was the direct cause of the following exception:
+[2025-02-13T00:15:43.790+0000] {subprocess.py:106} INFO - 
+[2025-02-13T00:15:43.790+0000] {subprocess.py:106} INFO - Traceback (most recent call last):
+[2025-02-13T00:15:43.791+0000] {subprocess.py:106} INFO -   File "/home/***/venv/omdb_env/lib/python3.12/site-packages/requests/adapters.py", line 667, in send
+[2025-02-13T00:15:43.791+0000] {subprocess.py:106} INFO -     resp = conn.urlopen(
+[2025-02-13T00:15:43.791+0000] {subprocess.py:106} INFO -            ^^^^^^^^^^^^^
+[2025-02-13T00:15:43.792+0000] {subprocess.py:106} INFO -   File "/home/***/venv/omdb_env/lib/python3.12/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+[2025-02-13T00:15:43.792+0000] {subprocess.py:106} INFO -     retries = retries.increment(
+[2025-02-13T00:15:43.792+0000] {subprocess.py:106} INFO -               ^^^^^^^^^^^^^^^^^^
+[2025-02-13T00:15:43.792+0000] {subprocess.py:106} INFO -   File "/home/***/venv/omdb_env/lib/python3.12/site-packages/urllib3/util/retry.py", line 519, in increment
+[2025-02-13T00:15:43.793+0000] {subprocess.py:106} INFO -     raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+[2025-02-13T00:15:43.793+0000] {subprocess.py:106} INFO -     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-02-13T00:15:43.793+0000] {subprocess.py:106} INFO - urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='www.omdbapi.com', port=80): Max retries exceeded with url: /?apikey=b063e85b&i=tt0371746 (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f0e3781cd70>: Failed to resolve 'www.omdbapi.com' ([Errno -2] Name or service not known)"))
+[2025-02-13T00:15:43.794+0000] {subprocess.py:106} INFO - 
+[2025-02-13T00:15:43.794+0000] {subprocess.py:106} INFO - During handling of the above exception, another exception occurred:
+[2025-02-13T00:15:43.794+0000] {subprocess.py:106} INFO - 
+[2025-02-13T00:15:43.795+0000] {subprocess.py:106} INFO - Traceback (most recent call last):
+[2025-02-13T00:15:43.795+0000] {subprocess.py:106} INFO -   File "/opt/***/pipeline/main.py", line 36, in <module>
+[2025-02-13T00:15:43.795+0000] {subprocess.py:106} INFO -     response = requests.get(f'http://www.omdbapi.com/?apikey={config['apikey']}&i={config['filmeid']}')
+[2025-02-13T00:15:43.795+0000] {subprocess.py:106} INFO -                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-02-13T00:15:43.796+0000] {subprocess.py:106} INFO -   File "/home/***/venv/omdb_env/lib/python3.12/site-packages/requests/api.py", line 73, in get
+[2025-02-13T00:15:43.796+0000] {subprocess.py:106} INFO -     return request("get", url, params=params, **kwargs)
+[2025-02-13T00:15:43.796+0000] {subprocess.py:106} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-02-13T00:15:43.797+0000] {subprocess.py:106} INFO -   File "/home/***/venv/omdb_env/lib/python3.12/site-packages/requests/api.py", line 59, in request
+[2025-02-13T00:15:43.797+0000] {subprocess.py:106} INFO -     return session.request(method=method, url=url, **kwargs)
+[2025-02-13T00:15:43.797+0000] {subprocess.py:106} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-02-13T00:15:43.798+0000] {subprocess.py:106} INFO -   File "/home/***/venv/omdb_env/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+[2025-02-13T00:15:43.798+0000] {subprocess.py:106} INFO -     resp = self.send(prep, **send_kwargs)
+[2025-02-13T00:15:43.798+0000] {subprocess.py:106} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-02-13T00:15:43.799+0000] {subprocess.py:106} INFO -   File "/home/***/venv/omdb_env/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+[2025-02-13T00:15:43.799+0000] {subprocess.py:106} INFO -     r = adapter.send(request, **kwargs)
+[2025-02-13T00:15:43.799+0000] {subprocess.py:106} INFO -         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-02-13T00:15:43.800+0000] {subprocess.py:106} INFO -   File "/home/***/venv/omdb_env/lib/python3.12/site-packages/requests/adapters.py", line 700, in send
+[2025-02-13T00:15:43.800+0000] {subprocess.py:106} INFO -     raise ConnectionError(e, request=request)
+[2025-02-13T00:15:43.801+0000] {subprocess.py:106} INFO - requests.exceptions.ConnectionError: HTTPConnectionPool(host='www.omdbapi.com', port=80): Max retries exceeded with url: /?apikey=b063e85b&i=tt0371746 (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f0e3781cd70>: Failed to resolve 'www.omdbapi.com' ([Errno -2] Name or service not known)"))
+[2025-02-13T00:15:43.967+0000] {subprocess.py:110} INFO - Command exited with return code 1
+[2025-02-13T00:15:43.980+0000] {taskinstance.py:3313} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-02-13T00:15:43.995+0000] {taskinstance.py:1226} INFO - Marking task as UP_FOR_RETRY. dag_id=call_omdb_api, task_id=teste, run_id=scheduled__2025-02-13T00:14:00+00:00, execution_date=20250213T001400, start_date=20250213T001542, end_date=20250213T001543
+[2025-02-13T00:15:44.040+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-02-13T00:15:44.041+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 51 for task teste (Bash command failed. The command returned a non-zero exit code 1.; 1203)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3006, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 274, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3161, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3185, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-02-13T00:15:44.061+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-02-13T00:15:44.092+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-13T00:15:44.095+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

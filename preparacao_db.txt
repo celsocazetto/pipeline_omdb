@@ -1,0 +1,24 @@
+# Criação da tabela de filmes
+CREATE TABLE omdb.filmes (
+	id_imdb VARCHAR(50) PRIMARY KEY,
+	titulo VARCHAR(100) NOT NULL,
+	ano_lancamento DATE NOT NULL,
+	diretor VARCHAR(50),
+	sinopse TEXT,
+	dias INT,
+	meses INT,
+	anos INT
+);
+
+# Criação da tabela de genero
+CREATE TABLE omdb.genero (
+	id SERIAL PRIMARY KEY,
+	genero VARCHAR(100) NOT NULL UNIQUE
+);
+
+# Criação da tabela de filme_genero
+CREATE TABLE omdb.filme_genero (
+	id_filme VARCHAR(50) REFERENCES omdb.filmes(id_imdb),
+	id_genero INT REFERENCES omdb.genero(id),
+	PRIMARY KEY(id_filme, id_genero)
+);

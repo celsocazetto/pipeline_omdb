@@ -1,0 +1,5 @@
+# List of requirements
+sqlalchemy==2.0.38
+psycopg2-binary==2.9.10
+requests
+pandas

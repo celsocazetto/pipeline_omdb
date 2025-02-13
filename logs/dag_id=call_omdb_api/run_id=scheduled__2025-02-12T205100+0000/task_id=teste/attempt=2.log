@@ -1,0 +1,60 @@
+[2025-02-12T20:53:02.255+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-02-12T20:53:02.272+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: call_omdb_api.teste scheduled__2025-02-12T20:51:00+00:00 [queued]>
+[2025-02-12T20:53:02.278+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: call_omdb_api.teste scheduled__2025-02-12T20:51:00+00:00 [queued]>
+[2025-02-12T20:53:02.278+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 2
+[2025-02-12T20:53:02.290+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): teste> on 2025-02-12 20:51:00+00:00
+[2025-02-12T20:53:02.295+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=1028) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-12T20:53:02.296+0000] {standard_task_runner.py:63} INFO - Started process 1029 to run task
+[2025-02-12T20:53:02.296+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'call_omdb_api', 'teste', 'scheduled__2025-02-12T20:51:00+00:00', '--job-id', '161', '--raw', '--subdir', 'DAGS_FOLDER/call_api.py', '--cfg-path', '/tmp/tmph1s2s6y5']
+[2025-02-12T20:53:02.297+0000] {standard_task_runner.py:91} INFO - Job 161: Subtask teste
+[2025-02-12T20:53:02.330+0000] {task_command.py:426} INFO - Running <TaskInstance: call_omdb_api.teste scheduled__2025-02-12T20:51:00+00:00 [running]> on host a7cb053280af
+[2025-02-12T20:53:02.405+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Celso Cazetto' AIRFLOW_CTX_DAG_ID='call_omdb_api' AIRFLOW_CTX_TASK_ID='teste' AIRFLOW_CTX_EXECUTION_DATE='2025-02-12T20:51:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-02-12T20:51:00+00:00'
+[2025-02-12T20:53:02.405+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-02-12T20:53:02.419+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-02-12T20:53:02.420+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/pipeline/main.py']
+[2025-02-12T20:53:02.429+0000] {subprocess.py:86} INFO - Output:
+[2025-02-12T20:53:03.346+0000] {subprocess.py:93} INFO - 2025-02-12 20:53:03,345 - INFO - ESTOU RODANDO ESSA PORRA
+[2025-02-12T20:53:03.353+0000] {subprocess.py:93} INFO - 2025-02-12 20:53:03,353 - INFO - Carregando o arquivo de configuração
+[2025-02-12T20:53:03.359+0000] {subprocess.py:93} INFO - 2025-02-12 20:53:03,359 - INFO - Buscando os dados de filme do ID:tt0499549
+[2025-02-12T20:53:03.485+0000] {subprocess.py:93} INFO - 2025-02-12 20:53:03,484 - INFO - Dados da API carregados com sucesso
+[2025-02-12T20:53:03.485+0000] {subprocess.py:93} INFO - 2025-02-12 20:53:03,484 - INFO - Iniciando transformação dos dados.
+[2025-02-12T20:53:03.495+0000] {subprocess.py:93} INFO - 2025-02-12 20:53:03,494 - INFO - Estabelecendo conexão com o banco de dados:
+[2025-02-12T20:53:03.528+0000] {subprocess.py:93} INFO - 2025-02-12 20:53:03,528 - INFO - Conexão estabelecida com sucesso.
+[2025-02-12T20:53:03.547+0000] {subprocess.py:93} INFO - 2025-02-12 20:53:03,547 - INFO - Iniciando o inserção na tabela: omdb.filmes
+[2025-02-12T20:53:03.551+0000] {subprocess.py:93} INFO - 2025-02-12 20:53:03,551 - INFO - 0 Inseridos na tabela omdb.filmes
+[2025-02-12T20:53:03.555+0000] {subprocess.py:93} INFO - 2025-02-12 20:53:03,555 - INFO - Iniciando o inserção na tabela: omdb.genero
+[2025-02-12T20:53:03.558+0000] {subprocess.py:93} INFO - 2025-02-12 20:53:03,558 - INFO - 0 Inseridos na tabela omdb.genero
+[2025-02-12T20:53:03.566+0000] {subprocess.py:93} INFO - 2025-02-12 20:53:03,566 - INFO - Iniciando o inserção na tabela: omdb.filme_genero
+[2025-02-12T20:53:03.569+0000] {subprocess.py:93} INFO - 2025-02-12 20:53:03,569 - INFO - 0 Inseridos na tabela omdb.filme_genero
+[2025-02-12T20:53:03.570+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-02-12T20:53:03.570+0000] {subprocess.py:93} INFO -   File "/opt/***/pipeline/main.py", line 88, in <module>
+[2025-02-12T20:53:03.572+0000] {subprocess.py:93} INFO -     conn.insere_filmes(filme_df, 'filmes', genero_df, 'genero', 'filme_genero', 'omdb')
+[2025-02-12T20:53:03.572+0000] {subprocess.py:93} INFO -   File "/opt/***/pipeline/connection.py", line 79, in insere_filmes
+[2025-02-12T20:53:03.573+0000] {subprocess.py:93} INFO -     self.close()
+[2025-02-12T20:53:03.574+0000] {subprocess.py:93} INFO -   File "/opt/***/pipeline/connection.py", line 36, in close
+[2025-02-12T20:53:03.576+0000] {subprocess.py:93} INFO -     self.conn.commit()
+[2025-02-12T20:53:03.576+0000] {subprocess.py:93} INFO -     ^^^^^^^^^^^^^^^^
+[2025-02-12T20:53:03.576+0000] {subprocess.py:93} INFO - AttributeError: 'Connection' object has no attribute 'commit'
+[2025-02-12T20:53:03.663+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-02-12T20:53:03.664+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-02-12T20:53:03.673+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-02-12T20:53:03.677+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=call_omdb_api, task_id=teste, run_id=scheduled__2025-02-12T20:51:00+00:00, execution_date=20250212T205100, start_date=20250212T205302, end_date=20250212T205303
+[2025-02-12T20:53:03.689+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 161 for task teste (Bash command failed. The command returned a non-zero exit code 1.; 1029)
+[2025-02-12T20:53:03.713+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-02-12T20:53:03.726+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-12T20:53:03.727+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
