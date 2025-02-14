@@ -1,6 +1,6 @@
 # Como Executar esse projeto
 
-[Videos do Projeto](https://www.loom.com/share/folder/065147cfa27642928bbd568087d7be2e)
+[Videos do Projeto](https://loom.com/share/folder/b91199bb98a04f68b81f761723e9930a)
 
 # Step 1
 # Preparação Docker Postgres
