@@ -22,3 +22,5 @@ CREATE TABLE omdb.filme_genero (
 	id_genero INT REFERENCES omdb.genero(id),
 	PRIMARY KEY(id_filme, id_genero)
 );
+
+Teste
